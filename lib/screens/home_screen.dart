@@ -9,11 +9,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 250, 239, 141), // Color sobrio para el AppBar
+        backgroundColor: const Color.fromARGB(255, 250, 239, 141), 
         title: const Text(
           'Proyecto Ezequiel Suarez',
           style: TextStyle(
-            fontFamily: 'time new roman', // Fuente profesional
+            fontFamily: 'time new roman', 
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -24,46 +24,46 @@ class HomeScreen extends StatelessWidget {
       ),
       drawer: DrawerMenu(),
       body: Container(
-        width: double.infinity, // Ocupa todo el ancho
-        height: double.infinity, // Ocupa toda la altura
+        width: double.infinity, 
+        height: double.infinity, 
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/fondo.png'), // Ruta de la imagen de fondo
+            image: AssetImage('assets/images/fondo.png'), 
             fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Container(
-            padding: const EdgeInsets.all(16.0), // Espaciado interno del marco
+            padding: const EdgeInsets.all(16.0), 
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8), // Fondo claro con transparencia
-              borderRadius: BorderRadius.circular(15), // Bordes redondeados
+              color: Colors.white.withOpacity(0.8), 
+              borderRadius: BorderRadius.circular(15), 
               boxShadow: const [
                 BoxShadow(
-                  color: Colors.black26, // Sombra tenue
-                  blurRadius: 10, // Desenfoque de la sombra
-                  offset: Offset(4, 4), // Desplazamiento de la sombra
+                  color: Colors.black26, 
+                  blurRadius: 10, 
+                  offset: Offset(4, 4), 
                 ),
               ],
             ),
             child: const Text(
               '¡Bienvenido a Spotify App!',
               style: TextStyle(
-                fontFamily: 'RobotoSlab', // Fuente profesional
-                fontSize: 24, // Tamaño del texto
-                fontWeight: FontWeight.bold, // Texto en negrita
-                color: Colors.black, // Color del texto (oscuro para contraste)
+                fontFamily: 'RobotoSlab', 
+                fontSize: 24,
+                fontWeight: FontWeight.bold, 
+                color: Colors.black, 
               ),
-              textAlign: TextAlign.center, // Centrado del texto
+              textAlign: TextAlign.center, 
             ),
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black, // Color sobrio para el botón
+        backgroundColor: Colors.black, 
         child: const Icon(
           Icons.add,
-          color: Colors.white, // Ícono contrastante
+          color: Colors.white, 
         ),
         onPressed: () {
           log('click button');

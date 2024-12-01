@@ -83,7 +83,7 @@ class _ScreenSpotifyState extends State<ScreenSpotify> {
               'url': album['external_urls']['spotify'],
             };
           });
-          filteredTracks = allTracks; // Inicialmente mostramos todos los tracks
+          filteredTracks = allTracks; 
         });
       } else {
         setState(() {
