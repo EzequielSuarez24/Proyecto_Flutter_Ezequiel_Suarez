@@ -1,22 +1,43 @@
-# flutter_application_base
+//main.dart
 
-### Proyecto base para construir un prototipo en Flutter
+Este archivo contiene el punto de entrada de la aplicación. Configura las preferencias iniciales y establece la estructura básica de rutas y tema:
+void main(): Inicializa las preferencias compartidas (almacenamiento persistente) y ejecuta la aplicación.
+Clase MyApp: Configura el tema de la aplicación (modo claro u oscuro) y define las rutas para la navegación entre pantallas (home, spotify, profile).
 
-El repo cuenta con un drawer menu para agregar las distintas pantallas para cada integrante del grupo.
+//home_screen.dart
+Esta pantalla representa la página principal de la aplicación con un diseño atractivo:
+Barra superior (AppBar): Tiene un título centrado, un diseño profesional y un botón de menú lateral (drawer).
+Cuerpo (Body): Fondo personalizado con una imagen y un mensaje de bienvenida estilizado en un contenedor centrado.
+Botón flotante (FAB): Un botón con ícono para futuras interacciones, actualmente registra un mensaje en la consola.
 
+//profile_screen.dart
+Esta pantalla muestra un perfil personal y permite alternar entre modo claro y oscuro:
+Encabezado del perfil: Una imagen circular grande representa al usuario.
+Cuerpo: Contiene información personal (nombre, fecha de nacimiento, teléfono) y un interruptor para cambiar el tema (modo claro/oscuro).
+Clase MyApp extendida: Maneja el estado del tema y lo actualiza en tiempo real.
 
-### screens
- 1. Se dejan pantallas de ejemplo como custom list, custom item list (Borrar)
- 2. Perfil de usuario para dar funcionalidad al switch del light/dark mode.(Reutilizar si asi lo prefieren)
+//spotify_screen.dart
+Esta pantalla conecta con la API de Spotify para mostrar los lanzamientos recientes y permite filtrarlos:
+Autenticación con Spotify: Obtiene un token de acceso para interactuar con la API.
+Consulta de datos: Obtiene una lista de lanzamientos recientes, incluyendo información como nombre, artista, fecha, y más.
+Filtros: Permite buscar canciones por ID, nombre, y limitar la cantidad de resultados mostrados.
+Interacción con enlaces: Abre la URL de Spotify del álbum o canción en el navegador predeterminado.
 
-### themes
-Se deja estilo demo para el dark mode. Borrar o cambiar según las preferencias del grupo.
+//Diseño general de la aplicación
+La aplicación sigue el modelo de navegación por rutas, con temas dinámicos y un diseño adaptativo:
+Rutas definidas: home, spotify, profile.
+Compatibilidad con temas: Alterna entre modo oscuro y claro.
+API de Spotify: Permite explorar contenido musical y personalizar la experiencia mediante filtros.
 
-### mocks
-En esta carpeta se almacenan los mocks con los que funciona la lista custom (Borrar)
+//Cómo iniciar la aplicación
+Clonar o descargar el repositorio.
+Instalar las dependencias: bash
 
-### helpers
-Se deja clase demo para manejar todos los valores que se almacenarán en las Shared Preferences. De momento solo se utiliza el darkMode
+//Copiar código
+flutter pub get
 
-### widgets
-Se deja drawer menú básico para la funcionalidad del repo. Cambiar diseño según las preferencias del grupo
+//Ejecutar la aplicación:
+bash
+Copiar código
+flutter run
+Navegar entre las pantallas para explorar las funcionalidades (home, spotify, profile).
